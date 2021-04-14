@@ -8,6 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-<h1>{{$post->body}}</h1>
+<h1>{{$post->slug  }}</h1>
+<h2>{{$post->body  }}</h2>
+<h3>{{$post->created_at  }}</h3>
 </body>
 </html>

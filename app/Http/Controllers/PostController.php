@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 use App\Post;
 class PostController extends Controller
 {
-    function show($slug){
+    function show($id){
       //       $post=\DB::table('post')->where('slug',$slug)->first();
 //        dd($post);
-        $post= Post::where('slug',$slug)->firstorfail();
+        $post= Post::where('id',$id)->firstorfail();
 //        if (!$post){
 //            abort(404);
 //        }
@@ -18,7 +18,7 @@ class PostController extends Controller
                 'post'=>$post
         ]);
     }
-// here is  tried to show data which i picked from url 
+// here is  tried to show data which i picked from url
     function view($post){
         $posts=['my-first-post'=>'this is my first post',
                 'my-second-post'=>'this is my second post'
