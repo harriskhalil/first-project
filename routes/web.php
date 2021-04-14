@@ -16,11 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/test/{tests}', function ($post) {
-    $posts=['my-first-post'=>'this is my first post',
-            'my-second-post'=>'this is my second post'
-            ];
-    return view('post',[
-        'post'=>$posts[$post]
-    ]);
-});
+Route::get('/test/{test}','PostController@view');
+Route::get('/post/{posts}', 'PostController@show');
