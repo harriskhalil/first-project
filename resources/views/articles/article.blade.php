@@ -107,8 +107,8 @@
                 <div class="col-lg-7 col-12">
                     <div class="about-box-layout2">
                         @foreach($articles as $article)
-                        <div class="item-subtitle">{{$article->title}}</div>
-                        <h2 class="item-title">{{$article->slug}}</h2>
+                        <div class="item-subtitle"><a href="/article/{{$article->slug}}">{{$article->title}}</a></div>
+
                         <p>{{$article->description}}</p>
                         @endforeach
                         <div class="item-award">
