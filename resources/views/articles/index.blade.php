@@ -1,4 +1,4 @@
-@extends('index-layout');
+@extends('articles.index-layout')
 
 @section('content')
     <!-- Slider Area Start Here -->
@@ -256,7 +256,7 @@
         </div>
     </section>
     <!-- About Us Area End Here -->
-@endsection;
+@endsection
 
 @section('footer')
     <!-- Footer Area Start Here -->
