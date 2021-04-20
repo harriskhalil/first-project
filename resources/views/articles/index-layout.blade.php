@@ -117,7 +117,10 @@
                         <div class="header-action-layout1">
                             <ul>
                                 <li class="header-action-btn">
-                                    <a href="#" class="item-btn">GET A FREE ESTIMATE</a>
+                                    <a href="/login" class="item-btn">login</a>
+                                </li>
+                                <li class="header-action-btn">
+                                    <a href="/register" class="item-btn">signup</a>
                                 </li>
                             </ul>
                         </div>

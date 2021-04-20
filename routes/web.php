@@ -17,15 +17,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/roof', function () {
-
     return view('articles.index');
 });
-Route::get('/blog', function () {
-    $article= App\Article::take(3)->get();
-    return view('articles.article',[
-        'articles'=>$article
-    ]);
-});
+Route::get('/article', 'ArticleController@index')->name('article.index');
 Route::get('/article/{article}','ArticleController@show');
 Route::get('/test/{test}','PostController@view');
 Route::get('/post/{posts}', 'PostController@show');
+Route::get('/testing',function (){
+    return view('');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
+    function index () {
+        $article= Article::paginate(2);
+        return view('articles.article',[
+            'articles'=>$article
+        ]);
+    }
     function show($slug){
         $article= Article::where('slug',$slug)->firstorfail();
         return view('articles.show',[
