@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/contact','ContactController@show');
+Route::post('/contact','ContactController@store');
 Route::get('/roof', function () {
     return view('articles.index');
 });
@@ -30,4 +32,5 @@ Route::get('/testing',function (){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 
